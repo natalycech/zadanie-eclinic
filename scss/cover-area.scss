@@ -1,0 +1,121 @@
+#cover-area {
+  background-image: url("../images/cover-area/slider_bg.jpg");
+  background-size: cover;
+  height: calc(100vh - #{$top-menu-height});
+  min-height: 560px;
+  max-height: 700px;
+  display: flex;
+  flex-direction: column;
+
+  .cover-title-wrapper {
+    height: 150px;
+    margin-top: 140px;
+    display: flex;
+    flex-direction: column;
+    .title-1 {
+      height: 30px;
+      display: flex;
+      align-items: center;
+      color: $light-color-text;
+      font-weight: 600;
+      font-size: 18px;
+    }
+    .title-2 {
+      height: 80px;
+      display: flex;
+      align-items: center;
+      color: $light-color-text;
+      font-weight: 1000;
+      font-size: 65px;
+    }
+    .button {
+      height: 40px;
+      width: 95px;
+      display: flex;
+      align-items: center;
+      font-size: 15px;
+      font-weight: 600;
+      color: $light-color-text;
+      border: 10px solid $primary-color;
+      background-color: $primary-color;
+      margin-top: 25px;
+      padding: 0 10px;
+      cursor: pointer;
+      &:hover {
+        background-color: $dark-background-color;
+        border: 10px solid $dark-background-color;
+      }
+    }
+  }
+  .cover-info-wrapper {
+    margin-top: 80px;
+    height: 130px;
+    display: flex;
+    justify-content: space-between;
+    .box {
+      display: flex;
+      flex-direction: row;
+      width: 30%;
+      background-color: $dark-background-color;
+      opacity: 0.7;
+      align-items: center;
+      cursor: pointer;
+      padding: 12px;
+
+      .image {
+        margin: 12px;
+        padding-right: 15px;
+      }
+      .box-wrapper {
+        display: flex;
+        flex-direction: column;
+      }
+      .title {
+        color: $light-color-text;
+        font-size: 20px;
+        font-weight: 700;
+      }
+      .text {
+        color: $light-secondary-color-text;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+@include phone {
+  #cover-area {
+    height: 700px;
+    .cover-title-wrapper {
+      align-items: center;
+      margin-top: 100px !important;
+      .title-2 {
+        font-size: 40px !important;
+      }
+    }
+    .cover-info-wrapper {
+      align-items: center;
+      margin-top: 20px !important;
+      flex-direction: column;
+      .box {
+        width: auto !important;
+        max-width: 300px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+@include tablet {
+  #cover-area {
+    .cover-info-wrapper {
+      gap: 0 10px;
+      .box {
+        padding: 25px !important;
+        .image {
+          display: none;
+        }
+      }
+    }
+  }
+}

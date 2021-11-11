@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      @font-face {
+        font-family: "SourceSansPro";
+        src: url("./fonts/SourceSansPro-Regular.ttf") format("truetype");
+      }
+    </style>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/919ccbb45c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/main-menu-scrolled.js"></script>
+    <script src="js/toggle-menu-about.js"></script>
+    <script src="js/hamburger.js"></script>
+  </head>
+
+  <body onscroll="scrolledMainMenu()">
+    <section id="top-menu-area">
+      <div class="container options">
+        <div class="left-options">
+          <div class="option"><a href="#">EuroPainClinics University</a></div>
+          <div class="option">
+            <i class="fas fa-phone-alt"></i>
+            <a href="#">+(421)903 904 905</a>
+          </div>
+          <div class="option">
+            <i class="far fa-envelope"></i><a href="#">hello@epc.university</a>
+          </div>
+        </div>
+
+        <div class="right-options">
+          <div class="option courses">
+            <a href="#"> (add courses) </a>
+            <i class="fas fa-briefcase"></i>
+          </div>
+          <div class="option">
+            <a href="#">Register</a>
+          </div>
+          <div class="option"><a href="#">Login</a></div>
+        </div>
+
+        <i class="fas fa-bars hamburger" onclick="toggleHamburger()"></i>
+      </div>
+    </section>
+
+    <section id="main-menu-area">
+      <div class="container options">
+        <div class="left-options">
+          <div class="option">
+            <img src="images/top-menu-area/logo_epc_edu.png" alt="" />
+          </div>
+        </div>
+
+        <div class="right-options">
+          <div class="option" id="dropdown">
+            <a class="menu-link" onclick="toggleMenuAbout()"> ABOUT US </a>
+            <span class="icon-wrapper">
+              <i class="fas fa-chevron-down" onclick="toggleMenu()"></i>
+            </span>
+
+            <div class="dropdown-menu">
+              <a href="#">
+                <img src="images/cover-area/ico_tutors.png" alt="" />
+                PROFESIONAL TUTORS
+              </a>
+              <a href="#"
+                ><img src="images/cover-area/ico_evidence.png" alt="" />EVIDENCE
+                BASED MEDICINE</a
+              >
+              <a href="#"
+                ><img src="images/cover-area/ico_eaccme.png" alt="" />EACCME
+                ACREDITATION</a
+              >
+            </div>
+          </div>
+          <div class="option" id="dropdown">
+            <a class="menu-link">UNIVERSITY</a>
+            <span class="icon-wrapper">
+              <i class="fas fa-chevron-down"></i>
+            </span>
+          </div>
+          <div class="option"><a class="menu-link" href="#">COURSES</a></div>
+          <div class="option"><a class="menu-link" href="#">FELLOWSHIP</a></div>
+          <div class="option"><a class="menu-link" href="#">FACULTY</a></div>
+          <div class="option"><a class="menu-link" href="#">BLOG</a></div>
+          <div class="option"><a class="menu-link" href="#">CONTACT US</a></div>
+          <div class="option"><i class="fas fa-search"></i></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cover-area">
+      <div class="container">
+        <div class="cover-title-wrapper">
+          <div class="title-1">KNOWLEDGE FOR YOUR TREATMENT</div>
+          <div class="title-2">EXCELLENCE</div>
+          <div class="button">EXPLORE NOW</div>
+        </div>
+        <div class="cover-info-wrapper">
+          <div class="box">
+            <div class="image">
+              <img src="images/cover-area/ico_tutors.png" alt="" />
+            </div>
+            <div class="box-wrapper">
+              <div class="title">PROFESIONAL TUTORS</div>
+              <div class="text">
+                Top in the field, FIPP certified physicians at your service
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="image">
+              <img src="images/cover-area/ico_evidence.png" alt="" />
+            </div>
+            <div class="box-wrapper">
+              <div class="title">EVIDENCE BASED MEDICINE (EBM)</div>
+              <div class="text">
+                Real results only, based on our multiple clinical studies
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="image">
+              <img src="images/cover-area/ico_eaccme.png" alt="" />
+            </div>
+            <div class="box-wrapper">
+              <div class="title">EACCME® ACCREDITATION</div>
+              <div class="text">
+                Rice your knowledge to next level and be rewarded for your
+                efforts
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="info-area">
+      <div class="container">
+        <div class="title-wrapper">
+          <div class="subtitle">Virtual Pain University</div>
+          <div class="title">Departments</div>
+        </div>
+        <div class="box-wrapper">
+          <div class="big-box">
+            <div class="small-box first">
+              <div class="sub-title-wrapper">
+                <div class="title">DEPARTMENTS BY ANATOMY</div>
+                <div class="subtitle">
+                  <i class="fas fa-graduation-cap"></i
+                  ><span class="number">07</span> courses
+                </div>
+              </div>
+            </div>
+            <div class="item">Facet joint department</div>
+            <div class="item">SI joint department</div>
+            <div class="item">Disc department</div>
+            <div class="item">Joint department</div>
+            <div class="item plus">MORE DEPARTMENTS BY ANATOMY</div>
+          </div>
+
+          <div class="big-box">
+            <div class="small-box second">
+              <div class="sub-title-wrapper">
+                <div class="title">DEPARTMENTS BY PROCEDURES</div>
+                <div class="subtitle">
+                  <i class="fas fa-graduation-cap"></i>
+                  <span class="number">06</span> courses
+                </div>
+              </div>
+            </div>
+            <div class="item">Endoscopic E-learning</div>
+            <div class="item">Cryoblation E-learning</div>
+            <div class="item">Radiofrequency E-learning</div>
+            <div class="item">Physio E-learning</div>
+            <div class="item plus">MORE DEPARTMENT BY PRODUCERES</div>
+          </div>
+
+          <div class="big-box">
+            <div class="small-box third">
+              <div class="sub-title-wrapper">
+                <div class="title">SUPPLEMENTARY PROCEDURES</div>
+                <div class="subtitle">
+                  <i class="fas fa-graduation-cap"></i>
+                  <span class="number">06</span> courses
+                </div>
+              </div>
+            </div>
+            <div class="item">Ultrasound showroom</div>
+            <div class="item">X-ray showroom</div>
+            <div class="item">Diagnostic showroom</div>
+            <div class="item">Guedeline showroom</div>
+            <div class="item plus">MORE SUPPLEMENTARY DEPARTMENTS</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about-area">
+      <div class="about-box right-gradiet light-color">
+        <img
+          class="about-box-cover-img introduction-img-size"
+          src="images/about-area/introduction_bg.jpg"
+          alt=""
+        />
+        <div class="container container-flex-direction">
+          <div class="about-wrapper">
+            <div class="about">
+              <div class="university-name">EuroPainClinics University</div>
+              <div class="main-title">Introduction</div>
+              <div class="main-descripton">
+                EuroPainClinics University is an international online
+                educational platform under the auspices of EuroPainClinics®,a
+                brand operating a network of European interventional pain
+                clinics.
+              </div>
+              <div class="description">
+                In a training program for pain management specialist,
+                EuroPainClinics University reflects their many years of high
+                expertise, clinical experience and extensive expert and
+                educational activities. An effective form of teaching is
+                provided by eight profile departments.
+              </div>
+              <button>EUROPAINCLINICS UNIVERSITY</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-box left-gradient dark-color">
+        <img
+          class="about-box-cover-img rapcan-img-size"
+          src="images/about-area/rapcan_bg.jpg"
+          alt=""
+        />
+        <div class="container container-flex-direction">
+          <div class="about-wrapper">
+            <div class="about">
+              <div class="university-name">Head of University</div>
+              <div class="main-title primary-color">Róbert Rapčan</div>
+              <div class="primary-color">M.D.,PhD.,MBA,FIPP</div>
+              <div class="main-descripton">
+                Dr.Róbert Rapčan,PhD.,MBA,FIPP,Medical Director of the
+                EuroPainClinics network, is a leading European specialist in
+                minimally invasive and endoscopic back treatment certified in
+                Sweden, Great, Britain, Slovakia and the Czech Republic.
+              </div>
+              <div class="description">
+                Dr.Rapčan has for a long time maintained the trend of
+                introducing innovative treatment methods and techniques, special
+                methodologies and the latest medical device technologies into
+                the clinical practice of all EuroPainClinics workplaces.
+              </div>
+              <button>RÓBERT RAPČAN</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

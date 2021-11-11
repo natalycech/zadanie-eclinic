@@ -1,0 +1,121 @@
+#about-area {
+  .about-box {
+    min-height: 400px;
+    position: relative;
+    overflow: hidden;
+
+    .about-box-cover-img {
+      z-index: -1;
+      position: absolute;
+      object-fit: cover;
+    }
+
+    .container {
+      display: flex;
+      height: 100%;
+
+      .about-wrapper {
+        width: 50%;
+
+        .about {
+          .university-name {
+            color: $dark-color-text;
+            font-size: 15px;
+            font-weight: 600;
+          }
+          .main-title {
+            font-size: 38px;
+            font-weight: 600;
+          }
+          .main-descripton {
+            margin-top: 20px;
+            font-weight: 600;
+            font-size: 12px;
+          }
+          .description {
+            margin-top: 10px;
+            font-size: 12px;
+            margin-bottom: 35px;
+          }
+
+          button {
+            font-size: 14px;
+            font-weight: 600;
+            color: $primary-color;
+            border: none;
+            background-color: $light-color-text;
+            padding: 10px 20px;
+            cursor: pointer;
+            &:hover {
+              background-color: $dark-background-color;
+              color: $light-color-text;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .right-gradiet {
+    background: linear-gradient(
+      90deg,
+      transparent 50%,
+      rgba(0, 128, 189, 0.9) 50%
+    );
+
+    .container-flex-direction {
+      flex-direction: row-reverse;
+      .about {
+        padding: 50px 0 35px 50px;
+      }
+    }
+  }
+
+  .left-gradient {
+    background: linear-gradient(
+      270deg,
+      transparent 50%,
+      rgba(209, 209, 209, 0.9) 50%
+    );
+
+    .container-flex-direction {
+      flex-direction: row;
+      .about {
+        padding: 50px 35px 50px 0;
+      }
+    }
+  }
+
+  .introduction-img-size {
+    width: 150%;
+    height: 100%;
+    margin-left: -50%;
+  }
+
+  .rapcan-img-size {
+    width: 130%;
+    height: 100%;
+  }
+}
+
+@include phone {
+  #about-area {
+    .right-gradiet {
+      background: rgba(0, 128, 189, 0.9);
+    }
+
+    .left-gradient {
+      background: rgba(209, 209, 209, 0.9);
+    }
+
+    .about-box {
+      min-height: initial;
+      .about-wrapper {
+        width: 100% !important;
+        .about {
+          padding: 50px 0 !important;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,129 @@
+#info-area {
+  margin-bottom: 65px;
+  margin-top: 40px;
+
+  .title-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .subtitle {
+      color: $primary-color;
+      font-size: 18px;
+    }
+    .title {
+      color: $dark-color-text;
+      font-size: 38px;
+      font-weight: 600;
+    }
+  }
+  .box-wrapper {
+    display: flex;
+    flex-direction: row;
+    margin-top: 35px;
+    gap: 0 10px;
+
+    .big-box {
+      width: 100%;
+      cursor: pointer;
+
+      .small-box {
+        height: 300px;
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: center;
+        background-position: center !important;
+        background-size: cover !important;
+
+        .sub-title-wrapper {
+          padding: 10px;
+          .title {
+            color: $light-color-text;
+            font-size: 18px;
+          }
+          .subtitle {
+            color: $light-color-text;
+            font-size: 15px;
+            i {
+              padding-right: 10px;
+            }
+            .number {
+              font-weight: 600;
+              font-size: 12px;
+            }
+          }
+        }
+      }
+
+      .item {
+        color: $primary-color;
+        border: 1px solid #dbdbdb;
+        margin-top: 5px;
+        text-align: center;
+        background-color: #f7f7f7;
+        padding: 12px;
+
+        &:hover {
+          background-color: $light-color-text;
+        }
+      }
+
+      .plus {
+        color: $light-secondary-color-text;
+        font-size: 15px;
+        padding: 12px 0;
+        background-color: #e3e3e3;
+        &:hover {
+          background-color: #c9c9c9;
+          color: $light-color-text;
+        }
+      }
+
+      .first {
+        background: linear-gradient(
+            180deg,
+            rgba(173, 177, 180, 0) 46%,
+            rgba(25, 98, 133, 1) 100%,
+            rgba(0, 128, 189, 1) 100%
+          ),
+          url("../images/info-area/box_1_bg.jpg");
+      }
+      .second {
+        background: linear-gradient(
+            180deg,
+            rgba(173, 177, 180, 0) 46%,
+            rgba(25, 98, 133, 1) 100%,
+            rgba(0, 128, 189, 1) 100%
+          ),
+          url("../images/info-area/box_2_bg.jpg");
+      }
+      .third {
+        background: linear-gradient(
+            180deg,
+            rgba(173, 177, 180, 0) 46%,
+            rgba(25, 98, 133, 1) 100%,
+            rgba(0, 128, 189, 1) 100%
+          ),
+          url("../images/info-area/box_3_bg.jpg");
+      }
+    }
+  }
+}
+
+@include tablet {
+  #info-area {
+    .plus {
+      min-height: 38px;
+    }
+  }
+}
+
+@include phone {
+  #info-area {
+    .box-wrapper {
+      gap: 20px 0;
+      flex-direction: column !important;
+    }
+  }
+}

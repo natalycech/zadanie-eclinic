@@ -1,0 +1,42 @@
+body {
+  font-family: "SourceSansPro";
+  margin: 0;
+}
+
+/* CONTAINER */
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 15px;
+
+  @include phone {
+    max-width: 540px;
+  }
+
+  @include tablet {
+    max-width: 720px;
+  }
+
+  @include desktop {
+    max-width: 960px;
+  }
+}
+/* CONTAINER */
+
+/* FONT COLORS */
+.primary-color {
+  color: $primary-color;
+}
+
+.dark-color {
+  color: $dark-color-text;
+}
+
+.light-color {
+  color: $light-color-text;
+}
+
+.light-secondary-color {
+  color: $light-secondary-color-text;
+}
+/* FONT COLORS */
